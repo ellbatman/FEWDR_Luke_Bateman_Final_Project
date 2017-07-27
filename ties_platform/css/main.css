@@ -1,0 +1,151 @@
+
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+/* Fix to include padding and border in the total width for each element */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+/* Research Link:
+
+https://www.one-tab.com/page/u239mobWQa649hEldwe3Gg
+
+*/
+
+/* main styles ----------------------------
+------------------------------------------- */
+body {
+  text-align: center;
+  margin: 0;
+}
+.site {
+  background-image: url("../img/asanoha-400px.png");
+  background-repeat: repeat;
+}
+
+.updates {
+  border: 2px dotted black;
+}
+.timeline {
+  border: 2px dotted black;
+}
+
+/* ----------------------------------------
+Typography
+------------------------------------------- */
+
+/* ----------------------------------------
+Nav
+------------------------------------------- */
+nav a img {
+  width: 5%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+.masthead {
+  background-image: url("../img/header_img.png");
+  background-position: center;
+  background-size: cover;
+
+  height: 400px;
+  color: #FFFFFF;
+  text-align: left;
+  line-height: 75%;
+}
+
+/* ----------------------------------------
+About
+------------------------------------------- */
+
+
+/* ----------------------------------------
+Projects
+------------------------------------------- */
+.projects {
+  background-color: #FFFFFF;
+}
+
+/* ----------------------------------------
+Media Queries
+------------------------------------------- */
+
+/* ----------------------------------------
+No-Grid Layout
+------------------------------------------- */
+@supports not (display: grid) {
+	.page-title,
+  .main-content,
+  .sidebar {
+		max-width: 50em;
+		margin: 0 auto;
+	}
+}
+/* ----------------------------------------
+Grid Layout
+------------------------------------------- */
+@supports (display: grid) {
+  @media screen and (min-width: 800px) {
+
+  	.site {
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr 3fr;
+      grid-template-areas:
+        "nav nav"
+        "updates main-content"
+        "timeline timeline"
+        "footer footer";
+		}
+
+    nav {
+      grid-area: nav;
+    }
+
+    .main-content {
+      grid-area: main-content;
+      margin: 0 2%;
+    }
+
+    .updates {
+      grid-area: updates;
+      margin: 0 2%;
+    }
+
+    .timeline {
+      grid-area: timeline;
+      margin: 0 2%;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+
+	}
+
+  @media screen and (min-width: 1200px) {
+    .site {
+			grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas:
+        "nav nav nav"
+        "updates main-content timeline"
+        "footer footer footer";
+		}
+  }
+}
