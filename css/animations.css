@@ -1,0 +1,68 @@
+.openRight span {
+  background: #112725;
+  -webkit-transform: all 300ms ease-in-out;
+  -moz-transform: all 300ms ease-in-out;
+  -o-transform: all 300ms ease-in-out;
+  transform: all 300ms ease-in-out; }
+  .openRight span:nth-child(1), .openRight span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .openRight span:nth-child(2), .openRight span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .openRight span:nth-child(1) {
+    left: 5px;
+    top: 7px; }
+  .openRight span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 7px; }
+  .openRight span:nth-child(3) {
+    left: -50%;
+    opacity: 0; }
+  .openRight span:nth-child(4) {
+    left: 100%;
+    opacity: 0; }
+  .openRight span:nth-child(5) {
+    left: 5px;
+    top: 27.5px; }
+  .openRight span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 27.5px; }
+
+.openLeft {
+  -webkit-transform: all 300ms ease-in-out;
+  -moz-transform: all 300ms ease-in-out;
+  -o-transform: all 300ms ease-in-out;
+  transform: all 300ms ease-in-out;
+  transform: rotate(360deg); }
+  .openLeft span {
+    background: #112725; }
+
+.activeRight {
+  transform: translateX(100%);
+  transition: all 300ms ease-in-out; }
+
+.activeLeft {
+  transform: translateX(0%);
+  transition: all 300ms ease-in-out; }
+
+.slideLeft {
+  transform: translateX(-50%);
+  transition: all 300ms ease-in-out; }
+
+.slideRight {
+  transform: translateX(50%);
+  transition: all 300ms ease-in-out; }
+
+.fade {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  opacity: 0; }
+
+/*# sourceMappingURL=animations.css.map */

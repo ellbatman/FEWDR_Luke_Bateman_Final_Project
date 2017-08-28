@@ -1,0 +1,14 @@
+.leftMenu {
+  padding-top: 5%;
+  height: 100%;
+  width: 50%;
+  background: #FFFFFF;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: all 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+/*# sourceMappingURL=leftMenu.css.map */

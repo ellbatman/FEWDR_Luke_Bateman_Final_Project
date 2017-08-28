@@ -1,0 +1,26 @@
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding-top: 10%;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out; }
+  .landingPage img {
+    width: 70%;
+    height: auto;
+    align-self: center; }
+  .landingPage h1 {
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out; }
+  .landingPage h2 {
+    border-bottom: 2px dotted #FFFFFF; }
+
+/*# sourceMappingURL=landingPage.css.map */

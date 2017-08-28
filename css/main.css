@@ -1,0 +1,376 @@
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+/* Fix to include padding and border in the total width for each element */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  overflow-x: hidden;
+  height: auto;
+  background: linear-gradient(to bottom, #122623 0%, #023C5D 25%, #03535D, #1B9250, #146D1C, #075F3A 100%); }
+
+img {
+  max-width: 100%; }
+
+.site {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out; }
+
+/*
+==========================================================================
+Global Variables
+==========================================================================
+*/
+/*
+==========================================================================
+Typography
+==========================================================================
+*/
+.landingPage {
+  color: #FFFFFF; }
+
+/*
+==========================================================================
+Loading Page
+==========================================================================
+*/
+canvas {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1001; }
+
+/*
+==========================================================================
+Navigation Menus
+==========================================================================
+*/
+/*
+==========================================================================
+Nav Base Styles
+==========================================================================
+*/
+nav {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1; }
+  nav #left {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start; }
+    nav #left h1 {
+      margin-top: 10px;
+      padding-left: 15px;
+      display: none; }
+  nav #right {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-top: 10px; }
+    nav #right h1 {
+      margin: 0;
+      padding-right: 15px;
+      display: none; }
+
+/*
+==========================================================================
+Nav Buttons
+==========================================================================
+*/
+.rightNavButton {
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 15px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+  .rightNavButton span {
+    display: block;
+    position: absolute;
+    height: 0.25em;
+    width: 50%;
+    background: #FFFFFF;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out; }
+
+span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0; }
+
+span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px; }
+
+span:nth-child(1), span:nth-child(2) {
+  top: 0px; }
+
+span:nth-child(3), span:nth-child(4) {
+  top: 18px; }
+
+span:nth-child(5), span:nth-child(6) {
+  top: 36px; }
+
+.leftNavButton {
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 15px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+  .leftNavButton span {
+    display: block;
+    position: absolute;
+    height: 0.25em;
+    width: 100%;
+    border-radius: 9px;
+    background: #FFFFFF;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out; }
+  .leftNavButton span:nth-child(1) {
+    transform: translateX(14px) translateY(11px) rotate(60deg); }
+  .leftNavButton span:nth-child(2) {
+    transform: translateX(-44px) translateY(11px) rotate(-60deg); }
+  .leftNavButton span:nth-child(3) {
+    top: 36px; }
+
+/*
+==========================================================================
+Navigation Menus
+==========================================================================
+*/
+.rightMenu {
+  height: 100%;
+  width: 50%;
+  background: #FFFFFF;
+  position: fixed;
+  transform: translateX(200%);
+  transition: all 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right; }
+  .rightMenu ul {
+    list-style: none; }
+    .rightMenu ul a {
+      text-decoration: none; }
+
+.aboutUs {
+  display: none; }
+
+footer {
+  width: 50%;
+  background: #000000;
+  z-index: 1002;
+  transform: translateX(200%);
+  transition: all 300ms ease-in-out; }
+
+.leftMenu {
+  padding-top: 5%;
+  height: 100%;
+  width: 50%;
+  background: #FFFFFF;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: all 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.leftMenu, .rightMenu {
+  padding-top: 100px; }
+
+/*
+==========================================================================
+Landing Page
+==========================================================================
+*/
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding-top: 10%;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out; }
+  .landingPage img {
+    width: 70%;
+    height: auto;
+    align-self: center; }
+  .landingPage h1 {
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out; }
+  .landingPage h2 {
+    border-bottom: 2px dotted #FFFFFF; }
+
+/*
+==========================================================================
+Timeline
+==========================================================================
+*/
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  color: #FFFFFF;
+  -webkit-transform: all 300ms ease-in-out;
+  -moz-transform: all 300ms ease-in-out;
+  -o-transform: all 300ms ease-in-out;
+  transform: all 300ms ease-in-out; }
+
+.time-line {
+  display: block;
+  align-self: center;
+  height: 0.1em;
+  width: 150px;
+  border-radius: 9px;
+  background: #FFFFFF; }
+
+.time-line:nth-child(1) {
+  transform: translateY(70px) rotate(90deg); }
+
+.time-line:nth-child(2) {
+  transform: rotate(90deg) translateX(45px); }
+
+.time-line:nth-child(3) {
+  transform: rotate(90deg) translateX(90px); }
+
+/*
+==========================================================================
+Animations
+==========================================================================
+*/
+.openRight span {
+  background: #112725;
+  -webkit-transform: all 300ms ease-in-out;
+  -moz-transform: all 300ms ease-in-out;
+  -o-transform: all 300ms ease-in-out;
+  transform: all 300ms ease-in-out; }
+  .openRight span:nth-child(1), .openRight span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .openRight span:nth-child(2), .openRight span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .openRight span:nth-child(1) {
+    left: 5px;
+    top: 7px; }
+  .openRight span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 7px; }
+  .openRight span:nth-child(3) {
+    left: -50%;
+    opacity: 0; }
+  .openRight span:nth-child(4) {
+    left: 100%;
+    opacity: 0; }
+  .openRight span:nth-child(5) {
+    left: 5px;
+    top: 27.5px; }
+  .openRight span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 27.5px; }
+
+.openLeft {
+  -webkit-transform: all 300ms ease-in-out;
+  -moz-transform: all 300ms ease-in-out;
+  -o-transform: all 300ms ease-in-out;
+  transform: all 300ms ease-in-out;
+  transform: rotate(360deg); }
+  .openLeft span {
+    background: #112725; }
+
+.activeRight {
+  transform: translateX(100%);
+  transition: all 300ms ease-in-out; }
+
+.activeLeft {
+  transform: translateX(0%);
+  transition: all 300ms ease-in-out; }
+
+.slideLeft {
+  transform: translateX(-50%);
+  transition: all 300ms ease-in-out; }
+
+.slideRight {
+  transform: translateX(50%);
+  transition: all 300ms ease-in-out; }
+
+.fade {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  opacity: 0; }
+
+/*
+==========================================================================
+Media Queries
+==========================================================================
+*/
+/* ----------------------------------------
+Grid Layout
+------------------------------------------- */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1em; }
+
+  h2 {
+    font-size: .75em; } }
+
+/*# sourceMappingURL=main.css.map */
